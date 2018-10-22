@@ -109,9 +109,11 @@ odoo.define('website_google_address_form.address_form_autocomplete', function (r
                                 // waiting the states loaded completely before set a value to state_id
                                 setTimeout(function () {
                                     $(self.fillFields[key].selector).val(value);
+                                    $(self.fillFields[key].selector).change();
                                 }, 1000);
                             } else {
                                 $(self.fillFields[key].selector).val(value);
+                                $(self.fillFields[key].selector).change();
                             }
                         });
                     });
